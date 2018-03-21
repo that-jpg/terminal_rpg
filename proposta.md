@@ -8,6 +8,8 @@ Seu heroi tera um acervo de habilidades e leveis, e o desempenho dele em batalha
  - Heroi
 	- nome
 	- descricao
+	- xp
+	- dinheiro
 	- items
 		- efeito
 		- nome 
@@ -17,11 +19,8 @@ Seu heroi tera um acervo de habilidades e leveis, e o desempenho dele em batalha
 		- descricao
 		- efeito
 		- dano
-		- xp
-		- dinheiro
 	- atributos
 		- forca
-		- inteligencia
 		- vida
 		- carisma
 		- sorte
@@ -57,10 +56,64 @@ Cada uma dessas janelas tera novas opcoes para o usuario interagir,
 		- recupera pouca vida
 		- recupera media vida
 		- recupera muita vida
-		- aumenta forca
+		- aumenta forca durante a batalha
 
-Na primeira versao o nosso jogo nao iria ter save, obrigando o usuario a completar o jogo inteiro de uma so vez.
-Depois poderam ser implementados mais items como armaduras ou armas.
-Novos tipos de heroi tambem poderam ser implementados tambem, sendo o nosso inicial um guerreiro
+## Features do futuro
+Salvar o estado do jogo, para o usuario poder voltar depois
+Novos itens como armaduras ou armas
+Novas classes de heroi com habilidades diferentes
+Um modo historia.
+
+## Objetos a serem implementados
+ * Engine
+	// Objeto que implementara a logica de negocio do jogo.
+	// O CLI do nosso jogo, onde o usuario vai poder interagir
+	* hero [Hero]
+	* regions [Regions[]]
+	* current_region [Region]
+	* state [Enum "Menu/Battle"]
+ * Hero
+	- name [String]
+	- description [String]
+	- items [Item[]]
+	- skills [Skill[]]
+	- level [Int]
+	- experience [Int]
+	- money [Int] // sao moedas de ouro
+ * Item
+	- effect [String]
+	- name [String]
+	- description [String]
+ * Skill
+	- effect [String]
+	- name [String]
+	- description [String]
+	- basic_damage [Int]
+ * Attributes
+	- strength [Int]
+	- health [Int]
+	- carisma [Int]
+	- luck [Int]
+ * Potions
+	- effect [String]
+	- name [String]
+	- description [String]
+ * Enemy
+	- name [String]
+	- description [String]
+	- loot [Item[]]
+	- skills [Skill[]]
+	- experience [Int]
+ * Region
+	- name [String]
+	- description [String]
+	- min_level [Int]
+
+
+
+ 
+
+	
+
 
 
