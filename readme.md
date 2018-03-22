@@ -1,7 +1,7 @@
 # Final RPG (RPG Terminal)
 Um RPG no terminal, onde voce sera um heroi em uma terra de fantasia cheia de aventuras e misterios.
 
-Como personagem voce podera viajar para diversas regioes do barao **Anydo** e batalhar com um numero grande de criaturas e inimigos que buscam destruir a paz do mundo.
+Como personagem voce podera viajar para diversas regioes do barao **Odlareg** e batalhar com um numero grande de criaturas e inimigos que buscam destruir a paz do mundo.
 
 Seu heroi tera um acervo de habilidades e leveis, e o desempenho dele em batalha dependera de seus atributos.
 
