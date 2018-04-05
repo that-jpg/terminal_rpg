@@ -65,16 +65,16 @@ Entre as opções que poderão ser escolhidas é possivel encontrar:
 - Procurar batalha: Menu que permite que o herói enfrente seus inimigos. Ao escolher essa opção, um inimigo irá aparecer e o modo batalha será iniciado. Nesse modo batalha existem mais menus que orientam as ações do usuário (atacar, usar item, tentar fugir);  
 - Ir ao Shopping: Permite que o usuário visualize, interaja e compre items usando seus recursos.
 
-##### Fluxo do jogo
+##### Fluxo do jogo 
 Depois de passar por todas as regiões disponíveis e sobreviver a incontáveis batalhas, o jogador poderá enfrentar o Boss final. Caso seja vitorioso, o jogo irá ser completado e o reino viverá em paz.
 
 Caso o resultado da batalha seja negativo, isso é, o herói for derrotado ele morrerá e todo o progresso será reiniciado.
 
-###### Batalhas
+###### Batalhas 
 O inimigo que será enfrentado depende da região em que o herói se encontra e em variáveis aleatórias que podem resultar em inimigos 
 mais fortes ou mais fracos, variando de acordo com a sorte. Em cada região, um determinado número fixo de inimigos precisam ser derrotados antes que o o jogador possa enfrentar o _"chefe"_ dessa região, e o _"chefe"_ final só poderá ser enfrentado caso a vitória seja obtida no confronto com o chefe de todas as regiões.
 
-###### Itens
+###### Itens 
 Existem itens que possuem efeitos temporários (que duram apenas durante uma batalha) e itens que possuem efeitos permanentes enquanto sendo usados.
 
 ####### Potions
@@ -148,5 +148,7 @@ Representa a região em que o herói se encontra, cada região possui inimigos d
 - description - String com a descricão da região;
 - minLevel - Level mínimo que o herói deve possuir antes de entrar nessa região;
 - enemies - Lista de inimigos que podem ser encontrados nessa região.
-
+#### Funcionamento:
+- getEnemy - retorna um inimigo que o herói irá enfrentar.
+- getters e setters.
  
