@@ -1,106 +1,49 @@
-package com.samuere;
+
 import java.util.*;
 
-/**
- * 
- */
 public class Attribute {
 
-    /**
-     * Default constructor
-     */
-    public Attribute() {
-    }
-
-    /**
-     * 
-     */
     private int strenght;
-
-    /**
-     * 
-     */
     private int health;
-
-    /**
-     * 
-     */
     private int charisma;
-
-    /**
-     * 
-     */
     private int luck;
 
-
-    /**
-     * @param strenght 
-     * @param health 
-     * @param charisma 
-     * @param luck
-     */
-    public void Attribute(int strenght, int health, int charisma, int luck) {
-        // TODO implement here
+    public Attribute(int strenght, int health, int charisma, int luck) {
+        this.strenght = strenght;
+        this.health = health;
+        this.charisma = charisma;
+        this.luck = luck;
     }
 
-    /**
-     * @return
-     */
     public int getStrenght() {
-        // TODO implement here
-        return 0;
+        return strenght;
     }
 
-    /**
-     * @param value
-     */
-    public void setStrenght(int value) {
-        // TODO implement here
+    public void setStrenght(int strenght) {
+        this.strenght = strenght;
     }
 
-    /**
-     * @return
-     */
     public int getHealth() {
-        // TODO implement here
-        return 0;
+        return health;
     }
 
-    /**
-     * @param value
-     */
-    public void setHealth(int value) {
-        // TODO implement here
+    public void setHealth(int health) {
+        this.health = health;
     }
 
-    /**
-     * @return
-     */
     public int getCharisma() {
-        // TODO implement here
-        return 0;
+        return charisma;
     }
 
-    /**
-     * @param value
-     */
-    public void setCharisma(int value) {
-        // TODO implement here
+    public void setCharisma(int charisma) {
+        this.charisma = charisma;
     }
 
-    /**
-     * @return
-     */
     public int getLuck() {
-        // TODO implement here
-        return 0;
+        return luck;
     }
 
-    /**
-     * @param value
-     */
-    public void setLuck(int value) {
-        // TODO implement here
+    public void setLuck(int luck) {
+        this.luck = luck;
     }
-
 }

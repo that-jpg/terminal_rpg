@@ -1,84 +1,37 @@
-package com.samuere;
 import java.util.*;
+public class Hero{
 
-/**
- * 
- */
-public class Hero extends Hero {
-
-    /**
-     * Default constructor
-     */
-    public Hero() {
-    }
-
-    /**
-     * 
-     */
     private ArrayList<Item> items;
-
-    /**
-     * 
-     */
     private int level;
-
-    /**
-     * 
-     */
     private int money;
 
-
-
-    /**
-     * 
-     */
-    public void Hero() {
-        // TODO implement here
+    public Hero(ArrayList<Item> items, int level, int money) {
+        this.items = items;
+        this.level = level;
+        this.money = money;
     }
 
-    /**
-     * @return
-     */
     public ArrayList<Item> getItems() {
-        // TODO implement here
-        return null;
+        return items;
     }
 
-    /**
-     * @param value
-     */
-    public void setItems(ArrayList<Item> value) {
-        // TODO implement here
+    public void setItems(ArrayList<Item> items) {
+        this.items = items;
     }
 
-    /**
-     * @return
-     */
     public int getLevel() {
-        // TODO implement here
-        return 0;
+        return level;
     }
 
-    /**
-     * @param value
-     */
-    public void setLevel(int value) {
-        // TODO implement here
+    public void setLevel(int level) {
+        this.level = level;
     }
 
-    /**
-     * @return
-     */
     public int getMoney() {
-        // TODO implement here
-        return 0;
+        return money;
     }
 
-    /**
-     * @param value
-     */
-    public void setMoney(int value) {
-        // TODO implement here
+    public void setMoney(int money) {
+        this.money = money;
     }
-
 }
