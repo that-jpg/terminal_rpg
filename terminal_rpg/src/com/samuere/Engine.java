@@ -1,11 +1,15 @@
 package com.samuere;
 
-import java.util.ArrayList;
+import com.samuere.menu.MenuAbstract;
+import com.samuere.menu.MenuFactory;
+
 import java.util.Scanner;
 
 public class Engine {
 
     static Hero hero;
+
+    public static MenuAbstract currentMenu;
 
     static Engine engine;
 
@@ -13,11 +17,9 @@ public class Engine {
         return false;
     }
 
-    public void displayMenu(MenuManager.Menu menu) {
-        System.out.println("...");
-        for (MenuManager.Option opt : menu.options) {
-            System.out.println("...");
-            System.out.println(opt.label);
+    public void displayMenu() {
+        for (int i = 0; i < currentMenu.options.size(); i++) {
+            System.out.println("[" + (i + 1) + "] " + currentMenu.options.get(i).label);
         }
     }
 
@@ -40,12 +42,12 @@ public class Engine {
 	    Engine engine = new Engine();
 	    Engine.engine = engine;
 
-	    MenuManager menuManager = new MenuManager();
-	    engine.displayMenu(MenuManager.currentSelected);
-		while (!Engine.isGameOver()) {
-		    menuManager.handleInput(scanner.nextInt());
-            engine.displayMenu(MenuManager.currentSelected);
+	    MenuFactory menuManager = new MenuFactory();
+	    Engine.currentMenu = menuManager.getMenu("start");
 
+		while (!Engine.isGameOver()) {
+            engine.displayMenu();
+		    Engine.currentMenu.choose(scanner.nextInt());
 		}
     }
 }
