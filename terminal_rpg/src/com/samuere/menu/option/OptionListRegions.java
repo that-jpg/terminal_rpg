@@ -7,7 +7,7 @@ public class OptionListRegions extends Option {
 
     public OptionListRegions() {
         this.name = "listRegions";
-        this.label = "ListRegions";
+        this.label = "Aqui deveria ter uma lista de regioes";
     }
     public void execute() {
         //MenuFactory menuFactory = new MenuFactory();

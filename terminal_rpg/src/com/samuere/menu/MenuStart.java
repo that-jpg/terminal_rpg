@@ -14,7 +14,7 @@ public class MenuStart extends MenuAbstract{
         OptionFactory optFactory = new OptionFactory();
         this.options.add(optFactory.getOption("start"));
         this.options.add(optFactory.getOption("about"));
-            this.options.add(optFactory.getOption("exit"));
+        this.options.add(optFactory.getOption("exit"));
     }
 
 }

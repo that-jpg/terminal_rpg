@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="terminal_rpg">
+    <output-path>$PROJECT_DIR$/out/artifacts/terminal_rpg</output-path>
+    <root id="archive" name="terminal_rpg.jar" />
+  </artifact>
+</component>

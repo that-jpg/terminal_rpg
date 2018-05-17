@@ -10,6 +10,10 @@ public class OptionRun extends Option {
     }
     public void execute() {
         System.out.println("Fugiu");
+        System.out.println("Como sua avo sempre dizia:");
+        System.out.println("\"É Melhor Escapar Fedendo do que Morrer Cheiroso ...\"");
+        System.out.println("So tome um banho antes de enfrentar o proximo!");
+
         MenuFactory menuFactory = new MenuFactory();
         Engine.currentMenu = menuFactory.getMenu("standard");
     }

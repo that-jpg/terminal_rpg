@@ -7,5 +7,6 @@ public class OptionAttack extends Option {
     }
     public void execute() {
         System.out.println("Atacou");
+        System.out.println("Infelizmente voce e fraco e o dragao nem ao menos sentiu seu golpe");
     }
 }
