@@ -12,6 +12,18 @@ public class MenuFactory {
 
        MenuAbout menuAbout = new MenuAbout();
        menus.add(menuAbout);
+       
+       MenuStandard menuStandard = new MenuStandard();
+       menus.add(menuStandard);
+       
+       MenuTravel menuTravel = new MenuTravel();
+       menus.add(menuTravel);
+       
+       MenuBattle menuBattle = new MenuBattle();
+       menus.add(menuBattle);
+       
+       MenuCharacterCreation menuCharacterCreation = new MenuCharacterCreation();
+       menus.add(menuCharacterCreation);
     }
 
     public MenuAbstract getMenu(String menuName) {

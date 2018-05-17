@@ -18,6 +18,27 @@ public class OptionFactory {
         OptionBackToStartMenu optionBackToStartMenu = new OptionBackToStartMenu();
         options.add(optionBackToStartMenu);
         // backToStartMenu
+        
+        OptionTravel optionTravel = new OptionTravel();
+        options.add(optionTravel);
+        
+        OptionSearchEnemy optionSearchEnemy = new OptionSearchEnemy();
+        options.add(optionSearchEnemy);
+        
+        OptionListRegions optionListRegions = new OptionListRegions();
+        options.add(optionListRegions);
+        
+        OptionBackToStandardMenu optionBackToStandardMenu = new OptionBackToStandardMenu();
+        options.add(optionBackToStandardMenu);
+        
+        OptionAttack optionAttack = new OptionAttack();
+        options.add(optionAttack);
+        
+        OptionRun optionRun = new OptionRun();
+        options.add(optionRun);
+        
+        OptionContinue optionContinue = new OptionContinue();
+        options.add(optionContinue);
     }
 
     public Option getOption(String name) {
