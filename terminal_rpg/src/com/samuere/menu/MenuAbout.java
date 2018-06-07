@@ -8,6 +8,10 @@ public class MenuAbout extends MenuAbstract{
         super();
         this.name = "about";
     }
+    
+    public void display() {
+        System.out.println("Esse jogo foi desenvolvido com muito amor");
+    }
 
     public void initOptions() {
         OptionFactory optFactory = new OptionFactory();

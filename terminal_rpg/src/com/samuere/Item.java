@@ -3,12 +3,12 @@ package com.samuere;
 public class Item {
 
 	private String name;
-	private String effect;
+	private int effect;
 	private String description;
-	private double price;
+	private int price;
 
 	//Construtor
-	public Item(String name, String effect, String description, double price) {
+	public Item(String name, int effect, String description, int price) {
 		this.name = name;
 		this.effect = effect;
 		this.description = description;
@@ -24,11 +24,11 @@ public class Item {
 		this.name = name;
 	}
 
-	public String getEffect() {
+	public int getEffect() {
 		return effect;
 	}
 
-	public void setEffect(String effect) {
+	public void setEffect(int effect) {
 		this.effect = effect;
 	}
 
@@ -40,18 +40,17 @@ public class Item {
 		this.description = description;
 	}
 
-	public double getPrice() {
+	public int getPrice() {
 		return price;
 	}
 
-	public void setPrice(double price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 
 	public void use(Hero hero) {
-		System.out.println("Você usou o item " + getName());
+		System.out.println("Voce usou o item " + getName());
 	}
 
 
 }
-

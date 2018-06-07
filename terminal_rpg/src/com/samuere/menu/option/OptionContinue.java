@@ -9,6 +9,7 @@ public class OptionContinue extends Option {
         this.label = "Continue";
     }
     public void execute() {
+    	Engine.hero.getAttributes().setActualStrenght(Engine.hero.getAttributes().getStrenght());
         MenuFactory menuFactory = new MenuFactory();
         Engine.currentMenu = menuFactory.getMenu("standard");
     }

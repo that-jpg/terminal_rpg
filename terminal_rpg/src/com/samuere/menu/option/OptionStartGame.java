@@ -18,15 +18,14 @@ public class OptionStartGame extends Option {
         MenuFactory menuFactory = new MenuFactory();
         String name, description;
 
-        System.out.print("SEJA BEM VINDO AO JOGO MAIS INCRIVEL DE TODOS OS JOGOS");
-        System.out.println("Qual eh o seu nome aventureiro?");
+        System.out.println("SEJA BEM VINDO AO JOGO MAIS INCRIVEL DE TODOS OS JOGOS!!\n");
+        System.out.println("Qual é o seu nome aventureiro?");
         name = sc.next();
 
-        System.out.println("Qual eh a sua historia?");
+        System.out.println("Qual é a sua historia?");
         description = sc.next();
 
-
-        Hero hero = new Hero(name, description, new ArrayList<Item>(), 0, 10 );
+        Hero hero = new Hero(name, description);
 
         Engine.hero = hero;
 

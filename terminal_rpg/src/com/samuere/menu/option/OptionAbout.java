@@ -12,7 +12,5 @@ public class OptionAbout extends Option {
     public void execute() {
         MenuFactory menuFactory = new MenuFactory();
         Engine.currentMenu = menuFactory.getMenu("about");
-
-        System.out.println("Esse jogo foi desenvolvido com muito amor");
     }
 }

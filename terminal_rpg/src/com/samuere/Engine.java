@@ -9,6 +9,8 @@ public class Engine {
 
     public static Hero hero;
 
+    public static Enemy currentEnemy;
+
     public static MenuAbstract currentMenu;
 
     static Engine engine;
@@ -18,6 +20,7 @@ public class Engine {
     }
 
     public void displayMenu() {
+    	currentMenu.display();
         for (int i = 0; i < currentMenu.options.size(); i++) {
             System.out.println("[" + (i + 1) + "] " + currentMenu.options.get(i).label);
         }
@@ -57,7 +60,11 @@ public class Engine {
 		while (!Engine.isGameOver()) {
             engine.displayMenu();
 		    Engine.currentMenu.choose(scanner.nextInt());
+			for (int i = 0; i < 100; i++)
+				System.out.println();
 		    System.out.println("");
+
 		}
+
     }
 }

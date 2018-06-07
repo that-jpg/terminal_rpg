@@ -11,6 +11,10 @@ public class MenuAbstract {
     public MenuAbstract() {
         this.initOptions();
     }
+    
+    public void display() {
+    	
+    }
 
     public void choose(int nthOption) {
         if (nthOption <= this.options.size()) {

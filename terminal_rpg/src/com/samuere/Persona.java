@@ -7,6 +7,15 @@ public class Persona {
 	private Attributes attributes;
 	private Skill skills;
 	private int experience;
+	private int experienceToUp = 20;
+	
+	public int getExperienceToUp() {
+		return experienceToUp;
+	}
+
+	public void setExperienceToUp() {
+		this.experienceToUp = 2*experienceToUp;
+	}
 
 	public Persona(String name, String description, Attributes attributes, Skill skills, int experience) {
 		this.name = name;
@@ -67,7 +76,7 @@ public class Persona {
 
 		int damage = 0;
 		damage = skills.use();
-		//TODO:Implementar skills que alteram atributos do adversario.
+		// TODO:Implementar skills que alteram atributos do adversario.
 		return damage;
 	}
 
@@ -76,4 +85,3 @@ public class Persona {
 		finalDamage = finalDamage - attributes.getDefense();
 	}
 }
-
