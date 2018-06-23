@@ -1,6 +1,5 @@
 package com.samuere.menu;
 
-import com.samuere.menu.option.Option;
 import com.samuere.menu.option.OptionFactory;
 
 public class MenuCharacterCreation extends MenuAbstract{

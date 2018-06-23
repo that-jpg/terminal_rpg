@@ -1,145 +1,80 @@
-package com.samuere;
 
+package com.samuere;
 import java.util.ArrayList;
 
-/**
- *
- */
+
 public class Region {
-
-	/**
-	 * Default constructor
-	 */
-	public Region() {
-	}
-
-	/**
-	 *
-	 */
 	private String name;
-
-	/**
-	 *
-	 */
 	private String description;
-
-	/**
-	 *
-	 */
 	private int minLevel;
-
-	/**
-	 *
-	 */
 	private int maxLevel;
-
-	/**
-	 *
-	 */
 	public ArrayList<Enemy> enemies;
-
-	/**
-	 *
-	 */
 	private String type;
-
-
-
-	/**
-	 *
-	 */
-	public void Region() {
-		// TODO implement here
+	public Region(String name, String description, int minLevel, int maxLevel, ArrayList<Enemy> enemies,  String type) {
+		this.name = name;
+		this.description = description;
+		this.minLevel = minLevel;
+		this.maxLevel = maxLevel;
+		this.enemies = enemies;
+		this.type = type;
 	}
 
-	/**
-	 * @return
-	 */
 	public String getName() {
-		// TODO implement here
-		return "";
+		return this.name ;
 	}
 
-	/**
-	 * @param value
-	 */
 	public void setName(String value) {
-		// TODO implement here
+			this.name = value;
 	}
 
-	/**
-	 * @return
-	 */
 	public String getDescription() {
-		// TODO implement here
-		return "";
+		return this.description;
 	}
 
-	/**
-	 * @param value
-	 */
 	public void setDescription(String value) {
-		// TODO implement here
+		this.description = value;
 	}
 
-	/**
-	 * @return
-	 */
 	public int getMinLevel() {
-		// TODO implement here
-		return 0;
+		return this.minLevel;
 	}
-
-	/**
-	 * @param value
-	 */
 	public void setMinLevel(int value) {
-		// TODO implement here
+		this.minLevel = value;
 	}
 
-	/**
-	 * @return
-	 */
 	public int getMaxLevel() {
-		// TODO implement here
-		return 0;
+		return this.maxLevel;
 	}
-
-	/**
-	 * @param value
-	 */
 	public void setMaxLevel(int value) {
-		// TODO implement here
+		this.maxLevel = value;
 	}
 
 	/**
 	 * @return
 	 */
 	public ArrayList<Enemy> getEnemies() {
-		// TODO implement here
-		return null;
+		return enemies;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setEnemies(ArrayList<Enemy> value) {
-		// TODO implement here
+
 	}
 
 	/**
 	 * @return
 	 */
 	public String getType() {
-		// TODO implement here
-		return "";
+		return type;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setType(String value) {
-		// TODO implement here
+		this.type = value;
 	}
 
 }

@@ -1,29 +1,24 @@
 package com.samuere.menu.option;
 
 import com.samuere.Engine;
-import com.samuere.menu.MenuFactory;
+
+import java.util.ArrayList;
+
+import com.samuere.*;
+import com.samuere.menu.*;
 
 public class OptionSearchEnemy extends Option {
-    public OptionSearchEnemy() {
-        this.name = "search";
-        this.label = "Search enemies";
-    }
-    public void execute() {
-        MenuFactory menuFactory = new MenuFactory();
-        System.out.println(".");
-   		System.out.println("..");
-     	System.out.println("...");
-       	System.out.println("[Um pequeno dragÃ£o surge e te ataca furiosamente]");
+	public OptionSearchEnemy() {
+		this.name = "search";
+		this.label = "Search enemies";
+	}
 
-    	System.out.println("");
-    	System.out.println("    `.oo'    |    '");
-        System.out.println(",.   (`-'    |    O Bixo");
-        System.out.println("'^\\`-' )     |    parace furioso");
-        System.out.println("  c-L'-      |");
-        System.out.println("");
-
-        System.out.println("O que voce fara?");
-
-        Engine.currentMenu = menuFactory.getMenu("battle");
-    }
+	public void execute() {
+		MenuFactory menuFactory = new MenuFactory();
+		// instanciar inimigo do search enemy
+		ArrayList<Item> loot = new ArrayList<Item>();
+		loot.add(new Item("Money",0,"",200));
+		Engine.currentEnemy = new Enemy("Dragão", "Criatura mitológica", new Attributes(1, 5, 5, 5, 5), new Skill(), 10, loot);
+		Engine.currentMenu = menuFactory.getMenu("battle");
+	}
 }

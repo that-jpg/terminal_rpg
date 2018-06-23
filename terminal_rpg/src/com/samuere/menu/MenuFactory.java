@@ -12,16 +12,31 @@ public class MenuFactory {
 
        MenuAbout menuAbout = new MenuAbout();
        menus.add(menuAbout);
-       
+
        MenuStandard menuStandard = new MenuStandard();
        menus.add(menuStandard);
-       
+
+       MenuMarket menuMarket = new MenuMarket();
+       menus.add(menuMarket);
+
        MenuTravel menuTravel = new MenuTravel();
        menus.add(menuTravel);
        
+       MenuInventary menuInventary = new MenuInventary();
+       menus.add(menuInventary);
+
        MenuBattle menuBattle = new MenuBattle();
        menus.add(menuBattle);
+
+       MenuPotions menuPotions = new MenuPotions();
+       menus.add(menuPotions);
        
+       MenuWin menuWin = new MenuWin();
+       menus.add(menuWin);
+       
+       MenuLoose menuLoose = new MenuLoose();
+       menus.add(menuLoose);
+
        MenuCharacterCreation menuCharacterCreation = new MenuCharacterCreation();
        menus.add(menuCharacterCreation);
     }
