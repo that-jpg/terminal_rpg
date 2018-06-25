@@ -11,7 +11,7 @@ public class MenuLoose extends MenuAbstract{
 	}
 
 	public void display() {
-		System.out.println("Você foi derrotado pelo " + Engine.currentEnemy.getName());
+		System.out.println("VocÃª foi derrotado pelo " + Engine.currentEnemy.getName());
         System.out.print("\u001B[31m");
         System.out.println("                   *              )               (");
         System.out.println(" (        (      (  `          ( /(               )\\ )  ");

@@ -16,14 +16,7 @@ public class MenuBattle extends MenuAbstract{
 		System.out.println("..");
 		System.out.println("...");
 		System.out.println("[Um " + Engine.currentEnemy.getName() + " surge e te ataca furiosamente]");
-
-		System.out.println("");
-		System.out.println("    `.oo'    |    '");
-		System.out.println(",.   (`-'    |    O Bixo");
-		System.out.println("'^\\`-' )     |    parece furioso");
-		System.out.println("  c-L'-      |");
-		System.out.println("");
-
+		System.out.println(Engine.currentEnemy.getSkin());
 		System.out.println("O que voce fara?");
 
 		System.out.println("Sua vida: " + Engine.hero.getAttributes().getActualHealth() + "/"

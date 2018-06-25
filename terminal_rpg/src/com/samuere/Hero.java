@@ -1,6 +1,7 @@
 package com.samuere;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Hero extends Persona {
 
@@ -18,13 +19,28 @@ public class Hero extends Persona {
 	public void upExperience(int xp) {
 		int newExperience = this.getExperience() + xp;
 		if(newExperience >= this.getExperienceToUp()) {
+			Random rand = new Random();
 			newExperience = newExperience - this.getExperienceToUp();
 			this.setExperience(newExperience);
 			this.setLevel(this.getLevel() + 1);
 			setExperienceToUp();
-			System.out.println("Voc� evoluiu para o nivel " + this.getLevel());
-			this.getAttributes().setMaxHealth(this.getLevel()*this.getAttributes().getMaxHealth());
+			System.out.println("Você evoluiu para o nivel " + this.getLevel());
+			int[] atributeIncrease = new int[6];
+			for(int i  = 0; i < 6 ; i++){
+				atributeIncrease[i] = rand.nextInt(this.getLevel()+3);
+			}
+			this.getAttributes().setMaxHealth(this.getAttributes().getMaxHealth() + atributeIncrease [1]);
 			this.getAttributes().setActualHealth(this.getAttributes().getMaxHealth());
+			this.getAttributes().setStrenght(this.getAttributes().getStrenght() + atributeIncrease[0]);
+			this.getAttributes().setCharisma(this.getAttributes().getCharisma() + atributeIncrease[2]);
+			this.getAttributes().setDefense(this.getAttributes().getDefense() + atributeIncrease[3]);
+			this.getAttributes().setLuck(this.getAttributes().getLuck() + atributeIncrease[4]);
+
+			System.out.println("Sua Vida máxima foi aumentada em + " + atributeIncrease[1]);
+			System.out.println("Sua Força foi aumentada em + " + atributeIncrease[0]);
+			System.out.println("Seu Carisma foi aumentado em + " + atributeIncrease[2]);
+			System.out.println("Sua Defesa foi aumentada em + " + atributeIncrease[3]);
+			System.out.println("Sua Sorte foi aumentada em + " + atributeIncrease[4]);
 		} else {
 			this.setExperience(newExperience);
 		}

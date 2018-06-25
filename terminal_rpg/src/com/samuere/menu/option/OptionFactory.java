@@ -28,8 +28,8 @@ public class OptionFactory {
         OptionSearchEnemy optionSearchEnemy = new OptionSearchEnemy();
         options.add(optionSearchEnemy);
         
-        OptionInventary optionInventary = new OptionInventary();
-        options.add(optionInventary);
+        OptionInventory optionInventory = new OptionInventory();
+        options.add(optionInventory);
 
         OptionListRegions optionListRegions = new OptionListRegions();
         options.add(optionListRegions);
@@ -74,7 +74,7 @@ public class OptionFactory {
                 return opt;
             }
         }
-        System.err.println("You tried to get an option that do not exist :/");
+        System.err.println("You tried to get an option that do not exist :/" );
         return null;
     }
 }

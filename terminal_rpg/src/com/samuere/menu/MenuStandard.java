@@ -11,22 +11,29 @@ public class MenuStandard extends MenuAbstract{
     }
 
     public void display() {
-    	System.out.println("	\r\n" + 
-    			"    /\\  /\\\r\n" + 
-    			"   //\\\\//\\\\\r\n" + 
-    			"   \\ ^  ^ /\r\n" + 
-    			"   ( 0  0 )\r\n" + 
-    			"   |  \\/  |\r\n" + 
-    			"   ( [--] )\r\n" + 
-    			"    \\____/\r\n" + 
-    			"   __|  |__\r\n" + 
-    			"  /__    __\\\r\n" + 
-    			"{-/ /    \\ \\-}\r\n" + 
-    			"    |----|\r\n" + 
-    			"    ||\\/||\r\n" + 
-    			"   _||  ||_\r\n" + 
-    			"  /__\\  /__\\\n");
-    	System.out.println(Engine.hero.getName() + " você está no nivel " + Engine.hero.getLevel());
+		String heroSkin = "   ,   A           {} \n"+
+				"  / \\, | ,        .--. \n" +
+				" |    =|= >      /.--.\\ \n"+
+				"  \\ /` | `       |====| \n"+
+				"   `   |         |`::`|   \n"+
+				"       |     .-;`\\..../`;_.-^-._ \n" +
+				"      /\\\\/  /  |...::..|`   :   `| \n" +
+				"      |:'\\ |   /'''::''|   .:.   | \n" +
+				"       \\ /\\;-,/\\   ::  |..:::::..| \n" +
+				"       |\\ <` >  >._::_.| ':::::' | \n" +
+				"       | `\"\"`  /   ^^  |   ':'   | \n" +
+				"       |       |       \\    :    / \n" +
+				"       |       |        \\   :   /  \n" +
+				"       |       |___/\\___|`-.:.-` \n" +
+				"       |        \\_ || _/    ` \n"+
+				"       |        <_ >< _> \n" +
+				"       |        |  ||  | \n" +
+				"       |        |  ||  | \n" +
+				"       |       _\\.:||:./_ \n" +
+				"       |      /____/\\____\\ \n";
+
+    	System.out.println(heroSkin);
+    	System.out.println(Engine.hero.getName() + " VocÃª estÃ¡ no nivel " + Engine.hero.getLevel());
     	System.out.println("Experiencia: " + Engine.hero.getExperience() + "/" + Engine.hero.getExperienceToUp() + "\n");
     }
     
@@ -35,7 +42,7 @@ public class MenuStandard extends MenuAbstract{
         this.options.add(optFactory.getOption("travel"));
         this.options.add(optFactory.getOption("search"));
         this.options.add(optFactory.getOption("goToMarket"));
-        this.options.add(optFactory.getOption("inventary"));
+        this.options.add(optFactory.getOption("inventory"));
         this.options.add(optFactory.getOption("exit"));
     }
 

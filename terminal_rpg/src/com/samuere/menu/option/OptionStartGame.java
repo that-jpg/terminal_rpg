@@ -19,10 +19,10 @@ public class OptionStartGame extends Option {
         String name, description;
 
         System.out.println("SEJA BEM VINDO AO JOGO MAIS INCRIVEL DE TODOS OS JOGOS!!\n");
-        System.out.println("Qual é o seu nome aventureiro?");
+        System.out.println("Qual Ã© o seu nome aventureiro?");
         name = sc.next();
 
-        System.out.println("Qual é a sua historia?");
+        System.out.println("Qual Ã© a sua historia?");
         description = sc.next();
 
         Hero hero = new Hero(name, description);

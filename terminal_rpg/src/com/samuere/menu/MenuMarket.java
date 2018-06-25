@@ -12,7 +12,7 @@ public class MenuMarket extends MenuAbstract{
     }
 
     public void display() {
-    	System.out.println("Você possui " + Engine.hero.getMoney() + " dinheiros");
+    	System.out.println("VocÃª possui " + Engine.hero.getMoney() + " dinheiros");
     	System.out.printf(".---.  .-.   .-.    _\n" +
     			"|~~~| .'~`. .' `. .'~`.\n" +
     			"| 1 | | 2 | | 3 | : 4 :\n" +

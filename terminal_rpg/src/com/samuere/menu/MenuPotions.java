@@ -19,8 +19,8 @@ public class MenuPotions extends MenuAbstract{
           for(int x : Engine.hero.allPotions())
             System.out.printf("%d     ", x);
           System.out.println("\nSua vida: " + Engine.hero.getAttributes().getActualHealth() + "/" + Engine.hero.getAttributes().getMaxHealth());
-          System.out.println("Sua força: " + Engine.hero.getAttributes().getActualStrenght());
-    	System.out.println("\nEscolha a sua poção\n");
+          System.out.println("Sua forÃ§a: " + Engine.hero.getAttributes().getActualStrenght());
+    	System.out.println("\nEscolha a sua poÃ§Ã£o\n");
 	}
 	
     public void initOptions() {
