@@ -2,6 +2,9 @@ package com.samuere;
 
 public class Item {
 
+	/**
+	 * Tudo encapsulado	
+	 */
 	private String name;
 	private int effect;
 	private String description;

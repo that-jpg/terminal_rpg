@@ -12,6 +12,9 @@ public class Attributes {
 	private int shieldEquipped = 0;
 	private int actualHealth;
 
+	
+	
+	
 	public Attributes(int strenght, int health, int charisma, int luck, int defense) {
 		this.strenght = strenght;
 		this.maxHealth = health;
@@ -21,6 +24,8 @@ public class Attributes {
 		this.actualHealth = health;
 		this.actualStrenght = strenght;
 	}
+	
+	
 
 	public int getStrenght() {
 		return strenght;

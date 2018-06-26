@@ -4,6 +4,11 @@ import java.util.ArrayList;
 
 public class MenuFactory {
 
+	
+	
+	/**
+	 * Lista com todos os menus do jogo
+	 */
     ArrayList<MenuAbstract> menus = new ArrayList<MenuAbstract>();
 
     public MenuFactory() {

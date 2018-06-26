@@ -3,6 +3,11 @@ package com.samuere.menu.option;
 import java.util.ArrayList;
 
 public class OptionFactory {
+	
+	
+	/**
+	 * Lista com todas as options que existem no jogo
+	 */
     ArrayList<Option> options = new ArrayList<Option>();
 
     public OptionFactory() {
