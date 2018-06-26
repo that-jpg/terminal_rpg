@@ -46,19 +46,19 @@ public class Potion extends Item {
 			int forca = at.getActualStrenght();
 			forca = forca + getEffect();
 			at.setActualStrenght(forca);
-			System.out.println("Você usou a poção " + getName());
+			System.out.println("VocÃª usou a poÃ§Ã£o " + getName());
 
 		} else {
-			// Aumenta a saude do heroi de acordo com o efeito da poção
+			// Aumenta a saude do heroi de acordo com o efeito da poï¿½ï¿½o
 			if (at.getActualHealth() < at.getMaxHealth()) {
 				health = health + getEffect();
 				if (health > at.getMaxHealth())
 					at.setActualHealth(at.getMaxHealth());
 				else
 					at.setActualHealth(health);
-				System.out.println("Você usou a poção " + getName());
+				System.out.println("VocÃª usou a poÃ§Ã£o " + getName());
 			} else {
-				System.out.println("Sua vida já está cheia!!");
+				System.out.println("Sua vida jÃ¡ estÃ¡ cheia!!");
 			}
 		}
 	}

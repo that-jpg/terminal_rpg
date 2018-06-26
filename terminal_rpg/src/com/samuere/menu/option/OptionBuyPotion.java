@@ -10,7 +10,7 @@ import com.samuere.*;
 public class OptionBuyPotion extends Option {
 	public OptionBuyPotion() {
 		this.name = "buyPotion";
-		this.label = "Comprar poções";
+		this.label = "Comprar poï¿½ï¿½es";
 	}
 
 	public void execute() {
@@ -18,10 +18,10 @@ public class OptionBuyPotion extends Option {
 		for (int i = 1; i < 5; i++) {
 			if (i != 4)
 				potions.add(
-						new Potion("Poção do tipo " + i, (int) Math.ceil((i * 0.25 * Engine.hero.getAttributes().getMaxHealth())),
+						new Potion("Poï¿½ï¿½o do tipo " + i, (int) Math.ceil((i * 0.25 * Engine.hero.getAttributes().getMaxHealth())),
 								"Lala", i * 5, i - 1));
 			else
-				potions.add(new Potion("Poção do tipo " + i, (int) Math.ceil((0.1 * Engine.hero.getAttributes().getStrenght())), "Lala",
+				potions.add(new Potion("Poï¿½ï¿½o do tipo " + i, (int) Math.ceil((0.1 * Engine.hero.getAttributes().getStrenght())), "Lala",
 						i * 5, i - 1));
 		}
 		System.out.printf(".---.  .-.   .-.    _\n" + "|~~~| .'~`. .' `. .'~`.\n" + "| 1 | | 2 | | 3 | : 4 :\n"
@@ -29,26 +29,30 @@ public class OptionBuyPotion extends Option {
 		for (int x : Engine.hero.allPotions())
 			System.out.printf("%d     ", x);
 		System.out.printf(
-				"\n[1] Recupera 0.25 da vida - Preço: %d\n[2] Recupera 0.50 da vida - Preço: %d\n[3] Recupera 0.75 da vida - Preço: %d\n[4] Aumenta forca em 0.10 durante a batalha - Preço: %d",
+				"\n[1] Recupera 0.25 da vida - Preï¿½o: %d\n[2] Recupera 0.50 da vida - Preï¿½o: %d\n[3] Recupera 0.75 da vida - Preï¿½o: %d\n[4] Aumenta forca em 0.10 durante a batalha - Preï¿½o: %d",
 				potions.get(0).getPrice(), potions.get(1).getPrice(), potions.get(2).getPrice(),
 				potions.get(3).getPrice());
-		System.out.println("\nDigite o tipo da poção desejada: ");
+		System.out.println("\nDigite o tipo da poï¿½ï¿½o desejada: ");
 		Scanner input = new Scanner(System.in);
 		int tipo = input.nextInt();
-		System.out.println("Digite a quantidade de poções desejadas: ");
+		System.out.println("Digite a quantidade de poï¿½ï¿½es desejadas: ");
 		int quantidade = input.nextInt();
-
-		Potion p = potions.get(tipo - 1);
-
-		if ((quantidade * p.getPrice()) > Engine.hero.getMoney())
-			System.out.println("Você não possui dinheiro sulficiente!");
-		else {
-			for (int i = 0; i < quantidade; i++) {
-				Engine.hero.addItem(p);
+		try {
+			Potion p = potions.get(tipo - 1);
+			
+			if ((quantidade * p.getPrice()) > Engine.hero.getMoney())
+				System.out.println("Vocï¿½ nï¿½o possui dinheiro sulficiente!");
+			else{
+				for (int i = 0; i < quantidade; i++) {
+					Engine.hero.addItem(p);
+				}
+				int troco = Engine.hero.getMoney() - quantidade * p.getPrice();
+				Engine.hero.setMoney(troco);
+				System.out.println("Vocï¿½ comprou " + quantidade + " poï¿½ï¿½es do tipo " + tipo + "!");
 			}
-			int troco = Engine.hero.getMoney() - quantidade * p.getPrice();
-			Engine.hero.setMoney(troco);
-			System.out.println("Você comprou " + quantidade + " poções do tipo " + tipo + "!");
+		}catch(IndexOutOfBoundsException e) {
+			System.out.println("Tipo de pocao inexistente");
 		}
+		
 	}
 }

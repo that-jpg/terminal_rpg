@@ -7,12 +7,12 @@ import com.samuere.menu.option.OptionFactory;
 public class MenuInventary extends MenuAbstract {
 	public MenuInventary() {
 		super();
-		this.name = "inventary";
+		this.name = "inventory";
 	}
 
 	@Override
 	public void display() {
-		System.out.println("Seu invent·rio:");
+		System.out.println("Seu invent√°rio:");
 		System.out.println("Money: " + Engine.hero.getMoney());
 		if (Engine.hero.getItems().size() == 0)
 			System.out.println("-");

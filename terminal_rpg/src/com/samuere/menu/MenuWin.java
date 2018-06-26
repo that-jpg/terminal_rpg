@@ -19,8 +19,11 @@ public class MenuWin extends MenuAbstract {
 			System.out.println(" e:");
 		for (Item a : Engine.currentEnemy.getLoot()) {
 			System.out.println(a.getName() + " [" + a.getPrice() + " dinheiros]");
+			System.out.println("Porem o governo esta fazendo um negocio chamado imposto de renda");
+			System.out.println("Entao ele vai taxar uma parte do seu dinheiro,");
+			System.out.println("Obrigado nobre.");
 			if (a.getName() == "Money")
-				Engine.hero.setMoney(Engine.hero.getMoney() + a.getPrice());
+				Engine.hero.setMoney(Engine.hero.getMoney() + (int)(a.getPrice() * 0.8));
 			else
 				Engine.hero.addItem(a);
 		}

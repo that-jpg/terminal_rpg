@@ -11,7 +11,7 @@ public class MenuTravel extends MenuAbstract{
     }
     
     public void display() {
-        System.out.println("Nosso governo é corrupto e por conta disso, as estradas ainda não foram construidas");
+        System.out.println("Nosso governo Ã© corrupto e por conta disso, as estradas ainda nï¿½o foram construidas");
         System.out.println("Voce vai ter que votar melhor em breve para resolver esse problema");
         System.out.println("Obrigado por sua paciencia!");
         System.out.println("## Goverdo Feudal - Voltamos, 20 anos em 2! ##");
