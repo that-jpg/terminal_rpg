@@ -8,8 +8,6 @@ public class OptionGoToMarket extends Option{
         this.name = "goToMarket";
         this.label = "Go to market";
     }
-    
-    
     public void execute() {
         MenuFactory menuFactory = new MenuFactory();
         Engine.currentMenu = menuFactory.getMenu("market");

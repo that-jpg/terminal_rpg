@@ -14,4 +14,10 @@ public class MenuCharacterCreation extends MenuAbstract{
         this.options.add(optFactory.getOption("continue"));
     }
 
+	@Override
+	public void display() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

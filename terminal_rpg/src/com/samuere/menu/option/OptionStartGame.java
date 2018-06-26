@@ -3,6 +3,7 @@ package com.samuere.menu.option;
 import com.samuere.Engine;
 import com.samuere.Hero;
 import com.samuere.Item;
+import com.samuere.Region;
 import com.samuere.menu.MenuFactory;
 
 import java.util.ArrayList;
@@ -26,11 +27,10 @@ public class OptionStartGame extends Option {
         description = sc.next();
 
         Hero hero = new Hero(name, description);
+        Region region = new Region("Cidade", 0, null);
 
         Engine.hero = hero;
-
-
-
+        Engine.currentRegion = region;
 
         Engine.currentMenu = menuFactory.getMenu("characterCreation");
     }

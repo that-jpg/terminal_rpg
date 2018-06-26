@@ -3,11 +3,6 @@ package com.samuere.menu.option;
 import java.util.ArrayList;
 
 public class OptionFactory {
-	
-	
-	/**
-	 * Lista com todas as options que existem no jogo
-	 */
     ArrayList<Option> options = new ArrayList<Option>();
 
     public OptionFactory() {
@@ -38,7 +33,22 @@ public class OptionFactory {
 
         OptionListRegions optionListRegions = new OptionListRegions();
         options.add(optionListRegions);
-
+        
+        OptionRegionCemitery optionRegionCemitery = new OptionRegionCemitery();
+        options.add(optionRegionCemitery);
+        
+        OptionRegionCity optionRegionCity = new OptionRegionCity();
+        options.add(optionRegionCity);
+        
+        OptionRegionDungeon optionRegionDungeon = new OptionRegionDungeon();
+        options.add(optionRegionDungeon);
+        
+        OptionRegionForest optionRegionForest = new OptionRegionForest();
+        options.add(optionRegionForest);
+        
+        OptionRegionMountain optionRegionMountain = new OptionRegionMountain();
+        options.add(optionRegionMountain);
+        
         OptionBackToStandardMenu optionBackToStandardMenu = new OptionBackToStandardMenu();
         options.add(optionBackToStandardMenu);
 
@@ -50,6 +60,9 @@ public class OptionFactory {
 
         OptionPotions optionPotions = new OptionPotions();
         options.add(optionPotions);
+        
+        OptionBoss optionBoss = new OptionBoss();
+        options.add(optionBoss);
 
         OptionUsePotion1 optionUsePotion1 = new OptionUsePotion1();
         options.add(optionUsePotion1);

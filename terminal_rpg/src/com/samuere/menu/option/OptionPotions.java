@@ -8,8 +8,6 @@ public class OptionPotions extends Option{
         this.name = "potions";
         this.label = "Potions";
     }
-    
-    
     public void execute() {
     	MenuFactory menuFactory = new MenuFactory();
     	Engine.currentMenu = menuFactory.getMenu("potions");

@@ -17,4 +17,10 @@ public class MenuStart extends MenuAbstract{
         this.options.add(optFactory.getOption("exit"));
     }
 
+	@Override
+	public void display() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

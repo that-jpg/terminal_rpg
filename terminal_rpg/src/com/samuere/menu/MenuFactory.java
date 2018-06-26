@@ -4,11 +4,6 @@ import java.util.ArrayList;
 
 public class MenuFactory {
 
-	
-	
-	/**
-	 * Lista com todos os menus do jogo
-	 */
     ArrayList<MenuAbstract> menus = new ArrayList<MenuAbstract>();
 
     public MenuFactory() {
@@ -27,7 +22,7 @@ public class MenuFactory {
        MenuTravel menuTravel = new MenuTravel();
        menus.add(menuTravel);
        
-       MenuInventary menuInventary = new MenuInventary();
+       MenuInventory menuInventary = new MenuInventory();
        menus.add(menuInventary);
 
        MenuBattle menuBattle = new MenuBattle();
@@ -39,7 +34,7 @@ public class MenuFactory {
        MenuWin menuWin = new MenuWin();
        menus.add(menuWin);
        
-       MenuLoose menuLoose = new MenuLoose();
+       MenuLose menuLoose = new MenuLose();
        menus.add(menuLoose);
 
        MenuCharacterCreation menuCharacterCreation = new MenuCharacterCreation();

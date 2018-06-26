@@ -7,6 +7,8 @@ public class OptionExit extends Option {
         this.label = "Exit";
     }
     public void execute() {
+		for (int i = 0; i < 100; i++)
+			System.out.println();
         System.out.print("\u001B[31m");
         System.out.println("                   *              )               (");
         System.out.println(" (        (      (  `          ( /(               )\\ )  ");

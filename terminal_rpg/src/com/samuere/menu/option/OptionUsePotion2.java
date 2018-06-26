@@ -1,16 +1,15 @@
 package com.samuere.menu.option;
 
-import com.samuere.Battle;
 import com.samuere.*;
 
 public class OptionUsePotion2 extends Option{
     public OptionUsePotion2() {
         this.name = "usePotion2";
-        this.label = "Recupera média vida";
+        this.label = "Recupera mï¿½dia vida";
     }
     public void execute() {
       if(Engine.hero.allPotions()[1] == 0){
-        System.out.println("Você não possui essa poção!\n");
+			Engine.error = "Vocï¿½ nï¿½o possui essa poï¿½ï¿½o!";
       } else {
     	  Battle.usePotion(Potion.MEVIDA);
       }

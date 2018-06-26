@@ -14,6 +14,8 @@ public class OptionBuyPotion extends Option {
 	}
 
 	public void execute() {
+		for (int i = 0; i < 100; i++)
+			System.out.println();
 		ArrayList<Potion> potions = new ArrayList<Potion>();
 		for (int i = 1; i < 5; i++) {
 			if (i != 4)
@@ -37,12 +39,12 @@ public class OptionBuyPotion extends Option {
 		int tipo = input.nextInt();
 		System.out.println("Digite a quantidade de po��es desejadas: ");
 		int quantidade = input.nextInt();
-		try {
+
+		try{
 			Potion p = potions.get(tipo - 1);
-			
 			if ((quantidade * p.getPrice()) > Engine.hero.getMoney())
-				System.out.println("Voc� n�o possui dinheiro sulficiente!");
-			else{
+				Engine.error = "Voc� n�o possui dinheiro sulficiente!";
+			else {
 				for (int i = 0; i < quantidade; i++) {
 					Engine.hero.addItem(p);
 				}
@@ -50,9 +52,8 @@ public class OptionBuyPotion extends Option {
 				Engine.hero.setMoney(troco);
 				System.out.println("Voc� comprou " + quantidade + " po��es do tipo " + tipo + "!");
 			}
-		}catch(IndexOutOfBoundsException e) {
-			System.out.println("Tipo de pocao inexistente");
+		} catch(Exception IndexOutOfBoundsException) {
+			Engine.error = "Essa poção não existe";
 		}
-		
 	}
 }

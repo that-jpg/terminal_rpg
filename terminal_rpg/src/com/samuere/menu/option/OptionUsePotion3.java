@@ -11,7 +11,7 @@ public class OptionUsePotion3 extends Option{
     }
     public void execute() {
       if(Engine.hero.allPotions()[2] == 0){
-        System.out.println("Você não possui essa poção!\n");
+			Engine.error = "Vocï¿½ nï¿½o possui essa poï¿½ï¿½o!";
       } else{
     	  Battle.usePotion(Potion.MUIVIDA);
       }

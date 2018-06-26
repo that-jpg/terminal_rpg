@@ -8,8 +8,8 @@ import java.util.Random;
 public class Battle {
 	public static void attack(Persona p1, Persona p2) {
 		Random rand = new Random();
-		int dano;
-		int vida;
+		int dano = 0;
+		int vida = 0;
 
 		if(p1 instanceof Hero){
 			dano = p1.getAttributes().getDamage()*(rand.nextInt(((Hero)p1).getLevel()+10));

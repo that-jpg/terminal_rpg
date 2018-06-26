@@ -2,10 +2,6 @@ package com.samuere;
 
 public class Persona {
 
-
-	/**
-	 * Propriedades com encapsulamento
-	 */
 	private String name;
 	private String description;
 	private Attributes attributes;
